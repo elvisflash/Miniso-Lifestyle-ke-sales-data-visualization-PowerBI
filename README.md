@@ -2,6 +2,8 @@
   <img src="minisobi.png" alt="MINISO Lifestyle KE sales Header Logo" width="100%">
 </p>
 
+---
+
 # MINISO LIFESTYLE KE Sales Analytics Dashboard (Power BI)
 A data-driven exploration of retail performance across multiple Miniso stores, transforming raw POS data into interactive insights that support smarter business decisions.
 
@@ -32,6 +34,7 @@ Sales transactions
 Product details
 Store-level data
 Brand categorization
+
 🔹 Data Cleaning & Preparation
 
 Before stepping into Power BI, the data went through refinement:
@@ -41,6 +44,7 @@ CLEAN() – to strip non-printable characters
 TRIM() – to eliminate excess spaces
 Standardized fields (dates, product names, brands)
 Structured data for relational modeling
+
 🔹 Data Modeling
 
 Built relationships across:
@@ -51,221 +55,169 @@ Built relationships across:
 
 *Brands
 
-*Time (Calendar table)
+*Time
+
+Optimized for efficient filtering and slicing.
+
+🔹 Visualization
+
+Power BI (Desktop & Service).
+
+🔹 Design
+
+Custom UI/UX implementation with a unified brand-consistent theme (Red/Black/White).
 
 
 ---
 
-## 🏗 System Architecture
+## 📈 Key Features & Analysis
+### 📅 1. Yearly Sales Analysis
+• Compare performance across 2024, 2025, and 2026 (YTD)
 
-### Backend: Microsoft Excel
+• Identify growth trends and seasonal patterns
 
-Used for:
+### 🏷️ 2. Brand Performance Insights
+• Sales contribution by brand
 
-* Data storage and management
-* Automation and calculations
-* Lookup relationships across sheets
-* Data validation and integrity
-* Pivot table reporting
+• Identify high-performing and underperforming brands
 
-### Frontend: Power BI
+### 🏆 3. Top Selling Products (Monthly per Store)
+• Highlights best-selling products across different stores
 
-Used for:
+• Tracks product trends over time
 
-* Interactive dashboards
-* KPI reporting
-* Portfolio performance analysis
-* Dynamic slicers for filtering
+### 🏬 4. Store-Level Performance
+• Compare sales across multiple shop locations
 
----
+• Identify top-performing stores
 
-## 📂 Excel Workbook Structure
+### 🎛️ 5. Interactive Slicers
+Dynamic filtering for:
 
-The Excel file is built with a relational structure and automated logic across multiple sheets.
+• Date (Year / Month)
 
-### Clients Sheet
+• Store
 
-* Stores all onboarded clients
-* Only onboarded clients can receive loans
-* Acts as the master client registry
+• Brand
 
-### Loans Sheet
-
-* Records all issued loans
-* Client selection via automated lookup
-* Automatically calculates:
-
-  * Interest
-  * Total payable
-  * Due dates
-  * Loan status
-
-### Payments Sheet
-
-* Records all repayments
-* Automatically links payments to loan IDs
-* Updates balances in real-time
-
-### Records Sheet
-
-* Central transaction ledger
-* Stores both loan and payment transactions
-* Used as the main reporting table
+• Product category
 
 ---
 
-## 🔄 Automation Features
-
-* Automated interest calculations
-* Real-time balance updates after each payment
-* Auto-classification of loan status:
-
-  * Pending
-  * Settled
-  * Bad Debt
-* Automated lookups across all sheets
-* No manual recalculations required
-
----
-
-## 🛡 Data Validation & Integrity
-
-To ensure clean and accurate data entry, the system includes:
-
-* Dropdown lists for client names and loan IDs
-* Numeric validation for financial fields
-* Date validation for transaction records
-* Duplicate prevention logic
-* Controlled text inputs
-
-This prevents data entry errors and ensures system reliability.
-
----
-
-## 📊 Excel Pivot Reports
-
-The workbook includes two automated pivot tables:
-
-### Loan Portfolio Summary
-
-* Total loans issued
-* Total amount disbursed
-* Interest earned
-* Outstanding balances
-
-### Repayment & Debt Analysis
-
-* Total repayments
-* Pending debts
-* Settled accounts
-* Bad debts
-
-These pivot tables serve as the data source for Power BI.
-
----
-
-## 📈 Power BI Dashboard
-
-The Power BI dashboard connects directly to the Excel file and provides:
-
-### Key Metrics
-
-* Total Loans Issued
-* Total Amount Repaid
-* Outstanding Balances
-* Pending Debts
-* Settled Loans
-* Bad Debts
-* Interest Earned
+## 📊 Dashboard Highlights
 
 ### Visuals
 
-* KPI cards
-* Bar charts
-* Pie charts
-* Trend analysis
-* Client performance tables
+*  Clean and intuitive Power BI visuals
+
+*  Treemaps for sales distribution
+
+* Trend lines for time-based analysis
+
+* Bar charts for comparisons
+
+* KPI indicators for quick insights
+
+* Performance tables
 
 ### Interactive Slicers
 
-* Filter by client
-* Filter by loan status
-* Filter by loan ID
-* Filter by date
+* Filter by Store
+* Filter by Year
+* Filter by Month
+* Filter by Brand
 
 All visuals respond dynamically to slicer selections.
 
 ---
 
-## 💼 Business Use Case
-
-This project simulates how a real lending institution would:
-
-* Onboard clients
-* Issue loans
-* Track repayments
-* Manage debt portfolios
-* Monitor financial performance
-* Make data-driven decisions
+## 🛠️ Tools & Technologies
+* SQL – Data extraction from Startnet POS
+* Excel – Data cleaning & preprocessing
+* Power BI – Data modeling & visualization
 
 ---
 
-## 🧠 Skills Demonstrated
-
-* Excel automation
-* Advanced formulas
-* Lookup functions
-* Data validation
-* Financial modeling
-* Pivot tables
-* Power BI dashboard design
-* Business intelligence reporting
+## 💡 Business Value
+This dashboard enables:
+* Better inventory decisions
+* Identification of top-performing products
+* Strategic brand positioning
+* Store performance benchmarking
+* Data-driven decision-making
 
 ---
 
 ## 🚀 How to Use
+*Open the Power BI .pbix file
 
-1. Add new clients in the **Clients Sheet**
-2. Issue loans from the **Loans Sheet**
-3. Record repayments in the **Payments Sheet**
-4. Balances and loan status update automatically
-5. Refresh Power BI to view updated analytics
+*Use slicers to filter by:
 
----
+    •Store
+  
+    •Date
+  
+    •Brand
+  
+*Explore visuals for insights across different dimensions
 
-## 🔧 Tools Used
+--- 
 
-* Microsoft Excel
-* Power BI Desktop
-* Pivot Tables
-* Power Query
-* DAX
+## 📌 Future Improvements
+*Add forecasting models for sales prediction
+*Integrate real-time data updates
+*Enhance drill-through capabilities
+*Include profit margin analysis
 
----
+--- 
 
-## 📚 Data Dictionary
-<img width="780" height="527" alt="image" src="https://github.com/user-attachments/assets/bd141cb8-9b77-412d-b40a-e0252738343c" />
-<img width="732" height="568" alt="image" src="https://github.com/user-attachments/assets/9a009d1e-bd1d-4b07-b31e-d6b4fb96ded7" />
 
----
+
+--- 
+
+👨‍💻 Author
+
+Elvis Mbaya
+Data Analyst | Power BI Enthusiast
+
+--- 
 
 ## 📚 Sample Data Sets
-<img width="1648" height="468" alt="image" src="https://github.com/user-attachments/assets/a67d6fcc-74ca-4cfb-8ac9-2875e42419f2" />
-<img width="827" height="278" alt="image" src="https://github.com/user-attachments/assets/ac6fa557-d1bb-484e-b0f1-3eafdf3e6910" />
-<img width="1372" height="513" alt="image" src="https://github.com/user-attachments/assets/606887b1-89dd-4faf-8181-e90a519a641c" />
-<img width="249" height="267" alt="image" src="https://github.com/user-attachments/assets/3ee58bb4-97a1-4dfd-b597-b2d53084de3a" />
-<img width="287" height="213" alt="image" src="https://github.com/user-attachments/assets/55aac07c-9d63-46ad-bb22-825029330b5e" />    <img width="461" height="211" alt="image" src="https://github.com/user-attachments/assets/0bba2b55-10d8-48a5-b8fa-053a4a969524" />
+### Stores and location
+<img width="268" height="500" alt="image" src="https://github.com/user-attachments/assets/c414912f-8e55-4fad-b7da-1daeb523a7c3" />
+
+### Brands-Monthly sales
+<img width="1830" height="604" alt="image" src="https://github.com/user-attachments/assets/635acc6c-8d0a-4c7d-9365-2bf078256077" />
+
+### Monthly sales and quantities per store
+<img width="1818" height="722" alt="image" src="https://github.com/user-attachments/assets/b1aacf58-06b7-4e8c-b9b5-54d930289887" />
+
+### Yearly sales
+<img width="548" height="445" alt="image" src="https://github.com/user-attachments/assets/639e470f-bf66-4cdb-84d7-20e26d922632" />
+
+### Monthly sales per store
+<img width="1681" height="450" alt="image" src="https://github.com/user-attachments/assets/029d326e-b01b-4789-b923-5a0a9c83148a" />
+
+### Yearly Top selling (Quantities) per store
+<img width="1717" height="422" alt="image" src="https://github.com/user-attachments/assets/c9fef85e-e3a6-494c-8183-09ef9d967556" />
+
+### Yearly Top selling (sales) per store
+<img width="1762" height="725" alt="image" src="https://github.com/user-attachments/assets/183fa126-6a0e-4efc-9006-7987a5004503" />
+
+### Monthly sales - Brands
+<img width="1845" height="611" alt="image" src="https://github.com/user-attachments/assets/2580634f-ecd4-4019-b734-d2b6b4e81688" />
 
 ---
+
 ## 📚 Dashboard - PowerBI
 * PAGE 1
-<img width="1494" height="810" alt="PAGE1" src="https://github.com/user-attachments/assets/38424c66-e3b6-4d84-b1c7-6751a252f6fd" />
+<img width="1323" height="743" alt="image" src="https://github.com/user-attachments/assets/3891a642-25c3-46a3-97ec-7c6c3fb59243" />
 
 * PAGE 2
-<img width="1482" height="809" alt="PAGE2" src="https://github.com/user-attachments/assets/032ab130-9697-4209-838a-e339a7c027fd" />
+<img width="1319" height="743" alt="image" src="https://github.com/user-attachments/assets/71db2767-8e1e-4271-95a1-1538167eb8a0" />
 
 * PAGE 3
-<img width="1434" height="806" alt="PAGE3" src="https://github.com/user-attachments/assets/08f6b0a9-5ef1-4c30-a305-63271e2d000a" />
+
 
 ---
 
